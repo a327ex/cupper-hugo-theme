@@ -452,15 +452,16 @@ caption {
 .patterns-list {
     list-style: none;
     margin-left: 0;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
 }
 .patterns-list h2 {
     font-size: 1.25rem;
     line-height: 1.6;
-}
-.patterns-list li + li {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 2px solid;
 }
 .patterns-list a {
     border: 0;

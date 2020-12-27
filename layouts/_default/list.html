@@ -1,6 +1,7 @@
 {{ define "main" }}
 <main id="main">
-  <h1>{{ .Title }}</h1>
+  <h1 align="center">{{ .Title }}</h1>
+  <!--
   {{ if site.Params.search }}
   <input
     id="search"
@@ -9,22 +10,15 @@
     aria-label="{{ T "search_aria_label" }}"
   />
   {{ end }}
-  <ul class="patterns-list" id="list">
+  -->
+  <ul align="center" class="patterns-list" id="list">
     {{ range .Pages.ByPublishDate.Reverse }}
     <li>
-      <h2>
+      <h4>
         <a href="{{ .RelPermalink }}">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
           {{ .Title }}
         </a>
-      </h2>
+      </h4>
     </li>
     {{ end }}
   </ul>
