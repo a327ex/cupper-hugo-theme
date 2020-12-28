@@ -107,7 +107,7 @@
     var rules = [
       '.intro-and-nav, .main-and-footer { filter: invert(100%); }',
       '* { background-color: inherit; }',
-      'img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%); }'
+      'img:not([src*=".svg"]), .colors, .demo-container { filter: invert(100%); }'
     ];
     rules.forEach(function(rule) {
       document.styleSheets[0].insertRule(rule);
