@@ -146,6 +146,7 @@
   }
 
   window.addEventListener('DOMContentLoaded', function () {
+    applyDarkTheme();
     showTheme();
     showContent();
   });
