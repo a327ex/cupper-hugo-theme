@@ -151,6 +151,8 @@
 
   window.addEventListener('DOMContentLoaded', function () {
     handleDarkThemeAsDefault();
+    applyDarkTheme();
+    checkbox.checked = true;
     showTheme();
     showContent();
   });
