@@ -106,6 +106,7 @@
   function applyDarkTheme() {
     var rules = [
       '.intro-and-nav, .main-and-footer { filter: invert(100%); }',
+      '.streamable_iframe { filter: invert(100%); }',
       '* { background-color: inherit; }',
       'img:not([src*=".svg"]), .colors, .demo-container { filter: invert(100%); }'
     ];
@@ -120,6 +121,7 @@
     }
   }
 
+  /*
   checkbox.addEventListener('change', function () {
     if (this.checked) {
       applyDarkTheme();
@@ -129,18 +131,12 @@
       persistTheme('false');
     }
   });
-
-  function handleDarkThemeAsDefault() {
-    {{ if .Site.Params.darkThemeAsDefault }}
-      persistTheme('true');
-      handleDarkThemeAsDefault = function() {};
-    {{ end }}
-  }
+  */
 
   function showTheme() {
     if (localStorage.getItem('darkTheme') === 'true') {
       applyDarkTheme();
-      checkbox.checked = true;
+      // checkbox.checked = true;
     }
   }
 
@@ -150,9 +146,6 @@
   }
 
   window.addEventListener('DOMContentLoaded', function () {
-    handleDarkThemeAsDefault();
-    applyDarkTheme();
-    checkbox.checked = true;
     showTheme();
     showContent();
   });
